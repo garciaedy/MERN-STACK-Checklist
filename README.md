@@ -151,6 +151,16 @@ User.remove({})
 
     .then(() => mongoose.connection.close())
 
+## Client/React App
+
+1. Inside express server dir => create-react-app client
+2. Cd into client 
+3. Npm I styled-components axios react-router-dom 
+4. Cd src => Mkdir components 
+5. Cd components => touch necessary components 
+6. Add proxy to Package.json (after “private:true”) => "proxy": "http://localhost:3001",
+
+
 
 
 
