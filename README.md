@@ -64,6 +64,23 @@ module.exports = mongoose;
 MONGODB_URI=mongodb://localhost/dbnamehere
 
 ---
+18. Changes to package.json
+
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurrently \"nodemon server.js\" \"cd ./client && npm start \" ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd client && npm install && npm run build"
+  }
+
+Add to the End
+
+ "engines": {
+    "node": "10.13.0"
+  }
+
+  ---
+
 
 
 
