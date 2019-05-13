@@ -160,6 +160,16 @@ User.remove({})
 5. Cd components => touch necessary components 
 6. Add proxy to Package.json (after “private:true”) => "proxy": "http://localhost:3001",
 
+## Heroku Deployment
+
+make sure git status is up to date
+1. heroku create
+2. heroku addons:create mongolab:sandbox
+3. git push heroku master
+4. heroku open (to check connection)
+5. heroku run node db/seeds.js (to seed database if necessary)
+6. heroku logs --tail (to check errors)
+
 
 
 
