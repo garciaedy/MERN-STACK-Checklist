@@ -42,6 +42,29 @@ app.listen(PORT, () => {
 })
 
 ---
+6. Add code below to db/connection.js: 
+
+
+require('dotenv').config();
+const mongoose = require("mongoose")
+
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(() => {
+
+    console.log("MONGODB is now connected")
+})
+
+
+module.exports = mongoose;
+
+---
+
+17. Add db name to .env file (view below) 
+
+
+MONGODB_URI=mongodb://localhost/dbnamehere
+
+---
+
 
 
 
